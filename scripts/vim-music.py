@@ -12,7 +12,7 @@ if sys.argv[1] == "song":
            f'  play the track named "{name}"\n', 
            "end tell\n"]
 
-  with open(f"{home_dir}/.vim/music/vim-music.scpt", "w") as v:
+  with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
     v.writelines(lines)
 
 elif sys.argv[1] == "playlist":
@@ -23,7 +23,7 @@ elif sys.argv[1] == "playlist":
            f'  play the playlist named "{name}"\n', 
            "end tell\n"]
 
-  with open(f"{home_dir}/.vim/music/vim-music.scpt", "w") as v:
+  with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
     v.writelines(lines)
 
 elif sys.argv[1] == "stop":
@@ -32,5 +32,5 @@ elif sys.argv[1] == "stop":
            '  pause\n',
            "end tell\n"]
 
-  with open(f"{home_dir}/.vim/music/vim-music.scpt", "w") as v:
+  with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
     v.writelines(lines)
