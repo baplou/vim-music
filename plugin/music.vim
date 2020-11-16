@@ -1,16 +1,22 @@
 function Song()
-  execute "!~/.vim/plugged/vim-music/scripts/vim-music.py song"
-  execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py song"
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  :redraw!
+  :echom "Vim Music Message: Playing Song"
 endfunction
 
 function Playlist()
-  execute "!~/.vim/plugged/vim-music/scripts/vim-music.py playlist"
-  execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py playlist"
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  :redraw!
+  :echom "Vim Music Message: Running Playlist"
 endfunction
 
 function Stop()
-  execute "!~/.vim/plugged/vim-music/scripts/vim-music.py stop"
-  execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py stop"
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  :redraw!
+  :echom "Vim Music Message: Stop Song"
 endfunction
 
 :command Playlist :call Playlist()
