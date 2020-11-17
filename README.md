@@ -51,17 +51,6 @@ make aliases for playlist names. Note: This will automatically shuffle the playl
 
 When using :Stop, you will exit vim for a second and then the song will stop playing.
 
-Examples:
----------------
-<p>
-  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/play.png?raw=true"></img>
-</p>
-
-<p>
-  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/playlist.png?raw=true"></img>
-</p>
-
-
 TODO
 ----
 * add docs
