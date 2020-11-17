@@ -1,8 +1,4 @@
-if exists("g:spotify")
-  break
-else
-  let g:spotify = 0
-endif
+let g:spotify = 0
 
 if g:spotify == 0
   function Song()

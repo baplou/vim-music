@@ -5,7 +5,7 @@ from pathlib import Path
 home_dir = str(Path.home())
 
 if __name__ == "__main__":
-  # apple music
+  # Apple Music
   if sys.argv[1] == "song":
     name = input("Enter the song name: ")
 
