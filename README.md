@@ -4,6 +4,12 @@ What is it? Vim Music is a plugin for vim that makes it possible to play and sto
 Only works on MacOS. This is because the plugin takes a command and writes it out as applescript. This also
 only works if you have your music in the music app on Mac and you use [Vim Plug](https://github.com/junegunn/vim-plug). Note: You do not need to have the music app open, it will automatically open when playing music.
 
+## Requirements
+* Python 3.6 or above
+* sys (pip package)
+* pathlib (pip package)
+* applescript (comes with most modern Macs)
+
 ## Installation
 Vim Plug
 
