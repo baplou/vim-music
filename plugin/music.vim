@@ -1,3 +1,4 @@
+" :redraw is called because vim crashes after a silent execute
 function Song()
   silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py song"
   silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
