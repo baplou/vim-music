@@ -1,6 +1,3 @@
-let g:spotify = 0
-
-if g:spotify == 0
   function Song()
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py song"
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
@@ -22,43 +19,30 @@ if g:spotify == 0
     :echom "Vim Music Message: Stop Song"
   endfunction
 
-elseif g:spotify == 1
-  function Song()
+  function SpotifySong()
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py ssong"
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
     :redraw!
     :echom "Vim Music Message: Playing Song"
   endfunction
 
-  function Playlist()
+  function SpotifyPlaylist()
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py splaylist"
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
     :redraw!
     :echom "Vim Music Message: Running Playlist"
   endfunction
 
-  function Stop()
+  function SpotifyStop()
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py sstop"
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
     :redraw!
     :echom "Vim Music Message: Stop Song"
   endfunction
 
-else
-  function Song()
-    echo "Vim Music Message: Invalid option for global variable spotify, must be 1 or 0."
-  endfunction
-
-  function Playlist()
-    echo "Vim Music Message: Invalid option for global variable spotify, must be 1 or 0."
-  endfunction
-
-  function Stop()
-    echo "Vim Music Message: Invalid option for global variable spotify, must be 1 or 0."
-  endfunction
-
-endif
-
 :command Playlist :call Playlist()
 :command PlaySong :call Song()
 :command Stop :call Stop()
+:command SpotifyPlaylist :call SpotifyPlaylist()
+:command SpotifyPlaySong :call SpotifySong()
+:command SpotifyStop :call SpotifyStop()
