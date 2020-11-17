@@ -4,8 +4,6 @@ What is it? Vim Music is a plugin for vim that makes it possible to play and sto
 Only works on MacOS. This is because the plugin takes a command and writes it out as applescript. This also
 only works if you have your music in the music app on Mac and you use [Vim Plug](https://github.com/junegunn/vim-plug). Note: You do not need to have the music app open, it will automaticlly open when playing music.
 
-![Example Gif](https://www.github.com/baplou/vim-music/blob/master/markup/main.gif?raw=true)
-
 ## Installation
 Vim Plug
 
