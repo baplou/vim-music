@@ -19,19 +19,19 @@ function Stop()
   :echom "Vim Music Message: Stop Song"
 endfunction
 
-function SpotifySong()
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py ssong"
+function Play()
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py play"
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  :redraw!
+  :echom "Vim Music Message: Stop Song"
+endfunction
+
+function SpotifyPlay()
+  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py splay"
   silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
   :redraw!
   :echom "Vim Music Message: Playing Song"
 endfunction
-
-" function Playlist()
-"   silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py playlist"
-"   silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
-"   :redraw!
-"   :echom "Vim Music Message: Running Playlist"
-" endfunction
 
 function SpotifyStop()
   silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py sstop"
@@ -43,6 +43,7 @@ endfunction
 :command Playlist :call Playlist()
 :command PlaySong :call Song()
 :command Stop :call Stop()
-" :command SpotifyPlaylist :call SpotifyPlaylist()
-:command SpotifyPlaySong :call SpotifySong()
+:command Play :call Play()
+
+:command SpotifyPlay:call SpotifyPlay()
 :command SpotifyStop :call SpotifyStop()

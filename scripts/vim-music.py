@@ -37,10 +37,17 @@ if __name__ == "__main__":
     with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
       v.writelines(lines)
 
-  # Spotify
-  elif sys.argv[1] == "ssong":
-    #name = input("Enter the song name: ")
+  elif sys.argv[1] == "play":
+    lines = ["#!/usr/bin/env osascript\n",
+             'tell application "Music"\n', 
+             '  play the track\n',
+             "end tell\n"]
 
+    with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
+      v.writelines(lines)
+
+  # Spotify
+  elif sys.argv[1] == "splay":
     lines = ["#!/usr/bin/env osascript\n",
              'tell application "Spotify"\n', 
              f'  play the track', 
@@ -48,19 +55,6 @@ if __name__ == "__main__":
 
     with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
       v.writelines(lines)
-
-  """
-  elif sys.argv[1] == "splaylist":
-    name = input("Enter the playlist name: ")
-
-    lines = ["#!/usr/bin/env osascript\n",
-             'tell application "Spotify"\n', 
-             f'  play the playlist named "{name}"\n', 
-             "end tell\n"]
-
-    with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
-      v.writelines(lines)
-  """
 
   elif sys.argv[1] == "sstop":
     lines = ["#!/usr/bin/env osascript\n",
