@@ -3,10 +3,6 @@ What is it? Vim Music is a plugin for vim that makes it possible to play and sto
 Only works on MacOS. This is because the plugin takes a command and writes it out as applescript. This also
 only works if you have your music in the music app on Mac and you use [Vim Plug](https://github.com/junegunn/vim-plug). Note: You do not need to have the music app open, it will automatically open when playing music.
 
-<p>
-  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/main.gif?raw=true"></img>
-</p>
-
 ## Requirements
 * Python 3.6 or above
 * sys (pip package)
@@ -54,6 +50,17 @@ You must give the exact name of the playlist, or it will not work. In the future
 make aliases for playlist names. Note: This will automatically shuffle the playlist.
 
 When using :Stop, you will exit vim for a second and then the song will stop playing.
+
+Examples:
+---------------
+<p>
+  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/play.gif?raw=true"></img>
+</p>
+
+<p>
+  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/playlist.gif?raw=true"></img>
+</p>
+
 
 TODO
 ----
