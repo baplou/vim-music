@@ -1,8 +1,10 @@
-" :redraw is called because vim crashes after a silent execute
+if exists("g:spotify")
+  break
+else
+  let g:spotify = 0
+endif
 
-let g:spotify = 0
-
-if spotify == 0
+if g:spotify == 0
   function Song()
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py song"
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
@@ -24,7 +26,7 @@ if spotify == 0
     :echom "Vim Music Message: Stop Song"
   endfunction
 
-elseif spotify == 1
+elseif g:spotify == 1
   function Song()
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py ssong"
     silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
@@ -47,7 +49,6 @@ elseif spotify == 1
   endfunction
 
 else
-  " error checking
   function Song()
     echo "Vim Music Message: Invalid option for global variable spotify, must be 1 or 0."
   endfunction
