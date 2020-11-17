@@ -1,47 +1,41 @@
-function Song()
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py song"
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+function Song(name)
+  silent execute '!osascript -e ' . "'" . 'tell application "Music"' . "'" . " -e" . " '" . 'play track ' . '"'. a:name . '"' . "'" . " -e 'end tell'"
   :redraw!
-  :echom "Vim Music Message: Playing Song"
+  :echom "Vim Music Message: Playing Song " . a:name
 endfunction
 
-function Playlist()
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py playlist"
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+function Playlist(name)
+  silent execute '!osascript -e ' . "'" . 'tell application "Music"' . "'" . " -e" . " '" . 'play the playlist named ' . '"'. a:name . '"' . "'" . " -e 'end tell'"
   :redraw!
-  :echom "Vim Music Message: Running Playlist"
+  :echom "Vim Music Message: Playing Playlist " . a:name
 endfunction
 
 function Stop()
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py stop"
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  silent execute '!osascript -e ' . "'" . 'tell application "Music"' . "'" . " -e" . " '" . 'pause' . "'" . " -e 'end tell'"
   :redraw!
   :echom "Vim Music Message: Stop Song"
 endfunction
 
 function Play()
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py play"
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  silent execute '!osascript -e ' . "'" . 'tell application "Music"' . "'" . " -e" . " '" . 'play' . "'" . " -e 'end tell'"
   :redraw!
-  :echom "Vim Music Message: Stop Song"
+  :echom "Vim Music Message: Play Song"
 endfunction
 
 function SpotifyPlay()
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py splay"
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  silent execute '!osascript -e ' . "'" . 'tell application "Spotify"' . "'" . " -e" . " '" . 'play' . "'" . " -e 'end tell'"
   :redraw!
   :echom "Vim Music Message: Playing Song"
 endfunction
 
 function SpotifyStop()
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.py sstop"
-  silent execute "!~/.vim/plugged/vim-music/scripts/vim-music.scpt"
+  silent execute '!osascript -e ' . "'" . 'tell application "Spotify"' . "'" . " -e" . " '" . 'pause' . "'" . " -e 'end tell'"
   :redraw!
   :echom "Vim Music Message: Stop Song"
 endfunction
 
-:command Playlist :call Playlist()
-:command PlaySong :call Song()
+:command -nargs=* Playlist :call Playlist(<q-args>)
+:command -nargs=* PlaySong :call Song(<q-args>)
 :command Stop :call Stop()
 :command Play :call Play()
 
