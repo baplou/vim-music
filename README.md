@@ -1,7 +1,9 @@
 # Vim Music
 What is it? Vim Music is a plugin for vim that makes it possible to play and stop music directly from vim.
-Only works on MacOS. This is because the plugin takes a command and writes it out as applescript. This also
-only works if you have your music in the music app on Mac and you use [Vim Plug](https://github.com/junegunn/vim-plug). Note: You do not need to have the music app open, it will automatically open when playing music.
+Only works on MacOS. This is because the plugin takes a command and writes it out as applescript.
+The plugin plays music from the music app on mac. For playing specific playlists and songs in Spotify,
+you can't do it yet. It will be added later. Note: You do not need to have the music app on Mac
+open. The plugin will automatically open it.
 
 ## Requirements
 * Python 3.6 or above
@@ -24,8 +26,6 @@ Then run:
 :PlugInstall
 ```
 
-note: Vundle and Vim8 installation support will be added soon.
-
 ## How to use?
 There are four commands:
 ```
@@ -37,19 +37,24 @@ There are four commands:
 
 Each one of those commands calls their respective function.
 ```vim
-:command PlaySong :call Song()
-:command Playlist :call Playlist()
+:command -nargs=* Playlist :call Playlist(<q-args>)
+:command -nargs=* PlaySong :call Song(<q-args>)
 :command Stop :call Stop()
 :command Play :call Play()
 ```
 
-When using :PlaySong, you will exit vim, and there will be a prompt asking you for the song name.
-You must give the exact name of the song, or it will not work. In the future you will be able to 
-make aliases for song names.
+When using :PlaySong, as an argument you give it the song name. Like this:
+```
+:PlaySong Bohemian Rhapsody
+```
 
-When using :Playlist, you will exit vim, and there will be a prompt asking you for the playlist name.
-You must give the exact name of the playlist, or it will not work. In the future you will be able to 
-make aliases for playlist names. Note: This will automatically shuffle the playlist.
+When using :Playlist, as an argument you give it the playlist name. Like this:
+```
+:Playlist Playlist Name
+```
+
+note: If you don't give :PlaySong or :Playlist an argument, the program will throw
+an applescript error, so please don't do it.
 
 When using :Stop, you will exit vim for a second and then the song will stop playing.
 When using :Play, you will exit vim for a second and then the current song will start playing.
@@ -70,6 +75,4 @@ be in a separate branch.
 TODO
 ----
 * add docs
-* add Vundle support (for noobs)
 * add aliases for Songs and Playlists
-* add nice gif to readme :)
