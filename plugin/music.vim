@@ -45,5 +45,5 @@ endfunction
 :command Stop :call Stop()
 :command Play :call Play()
 
-:command SpotifyPlay:call SpotifyPlay()
+:command SpotifyPlay :call SpotifyPlay()
 :command SpotifyStop :call SpotifyStop()
