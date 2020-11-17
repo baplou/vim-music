@@ -19,7 +19,7 @@ Then run:
 :PlugInstall
 ```
 
-note: Vundle and Vim Plug installation support will be added soon.
+note: Vundle and Vim8 installation support will be added soon.
 
 ## How to use?
 There are three commands:
