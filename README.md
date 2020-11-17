@@ -2,7 +2,7 @@
 
 What is it? Vim Music is a plugin for vim that makes it possible to play and stop music directly from vim.
 Only works on MacOS. This is because the plugin takes a command and writes it out as applescript. This also
-only works if you have your music in the music app on Mac and you use [Vim Plug](https://github.com/junegunn/vim-plug). Note: You do not need to have the music app open, it will automaticlly open when playing music.
+only works if you have your music in the music app on Mac and you use [Vim Plug](https://github.com/junegunn/vim-plug). Note: You do not need to have the music app open, it will automatically open when playing music.
 
 ## Installation
 Vim Plug
