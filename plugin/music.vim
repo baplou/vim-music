@@ -34,6 +34,7 @@ function SpotifyStop()
   :echom "Vim Music Message: Stop Song"
 endfunction
 
+" this is so that people can remap the thing
 :command -nargs=* Playlist :call Playlist(<q-args>)
 :command -nargs=* PlaySong :call Song(<q-args>)
 :command Stop :call Stop()

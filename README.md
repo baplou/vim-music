@@ -6,9 +6,6 @@ you can't do it yet. It will be added later. Note: You do not need to have the m
 open. The plugin will automatically open it.
 
 ## Requirements
-* Python 3.6 or above
-* sys (pip package)
-* pathlib (pip package)
 * applescript (comes with most modern Macs)
 
 ## Installation
