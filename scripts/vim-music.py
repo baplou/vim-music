@@ -50,7 +50,7 @@ if __name__ == "__main__":
   elif sys.argv[1] == "splay":
     lines = ["#!/usr/bin/env osascript\n",
              'tell application "Spotify"\n', 
-             f'  play the track named "song name"', 
+             f'  play\n"', 
              "end tell\n"]
 
     with open(f"{home_dir}/.vim/plugged/vim-music/scripts/vim-music.scpt", "w") as v:
