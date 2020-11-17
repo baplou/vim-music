@@ -41,10 +41,10 @@ function SpotifyQuit()
   :echom "Vim Music Message: Spotify has quit"
 endfunction
 
-function SpotifyQuit()
+function Quit()
   silent execute '!osascript -e ' . "'" . 'tell application "Music"' . "'" . " -e" . " '" . 'quit' . "'" . " -e 'end tell'"
   :redraw!
-  :echom "Vim Music Message: Spotify has quit"
+  :echom "Vim Music Message: Music has quit"
 endfunction
 " --------------------------------------------------------------------------------------
 :command -nargs=* Playlist :call Playlist(<q-args>)
