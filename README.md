@@ -54,11 +54,11 @@ When using :Stop, you will exit vim for a second and then the song will stop pla
 Examples:
 ---------------
 <p>
-  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/play.gif?raw=true"></img>
+  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/play.png?raw=true"></img>
 </p>
 
 <p>
-  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/playlist.gif?raw=true"></img>
+  <img src="https://www.github.com/baplou/vim-music/blob/master/markup/playlist.png?raw=true"></img>
 </p>
 
 
