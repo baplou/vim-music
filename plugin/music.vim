@@ -55,4 +55,4 @@ endfunction
 :command SpotifyStop :call SpotifyStop()
 
 :command SpotifyQuit :call SpotifyQuit()
-:command Quit :call Quit()
+:command MusicQuit :call Quit()
