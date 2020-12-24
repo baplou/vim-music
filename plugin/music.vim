@@ -1,4 +1,3 @@
-" --------------------------------------------------------------------------------------
 function Song(name)
   silent execute '!osascript -e ' . "'" . 'tell application "Music"' . "'" . " -e" . " '" . 'play track ' . '"'. a:name . '"' . "'" . " -e 'end tell'"
   :redraw!
@@ -22,7 +21,7 @@ function Play()
   :redraw!
   :echom "Vim Music Message: Play Song"
 endfunction
-" --------------------------------------------------------------------------------------
+
 function SpotifyPlay()
   silent execute '!osascript -e ' . "'" . 'tell application "Spotify"' . "'" . " -e" . " '" . 'play' . "'" . " -e 'end tell'"
   :redraw!
@@ -34,7 +33,7 @@ function SpotifyStop()
   :redraw!
   :echom "Vim Music Message: Stop Song"
 endfunction
-" --------------------------------------------------------------------------------------
+
 function SpotifyQuit()
   silent execute '!osascript -e ' . "'" . 'tell application "Spotify"' . "'" . " -e" . " '" . 'quit' . "'" . " -e 'end tell'"
   :redraw!
@@ -46,7 +45,7 @@ function Quit()
   :redraw!
   :echom "Vim Music Message: Music has quit"
 endfunction
-" --------------------------------------------------------------------------------------
+
 :command -nargs=* Playlist :call Playlist(<q-args>)
 :command -nargs=* PlaySong :call Song(<q-args>)
 :command Stop :call Stop()
@@ -57,4 +56,3 @@ endfunction
 
 :command SpotifyQuit :call SpotifyQuit()
 :command Quit :call Quit()
-" --------------------------------------------------------------------------------------
